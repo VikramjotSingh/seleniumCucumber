@@ -8,18 +8,19 @@ import java.io.IOException;
 public class Homepage {
 	webconnector wc=new webconnector();
 
-    public void goToHomePage() throws InvalidFormatException, IOException{
-    	String URL=wc.getSpecificColumnData("./src/test/testdata/data.xlsx","sheet1", "URL");
-        driver.get(URL);
-        wc.waitForCondition("PageLoad","",60);
-    }
+	public void clickOnTshirtLink() throws Exception {
+		wc.PerformActionOnElement("TshirtLink_HomePage", "Click", "");
+		wc.PerformActionOnElement("TshirtLabel_TshirtPage", "WaitForElementDisplay", "");
+	}
 
-    public void checkBlogLinkDisplay() {
-    	try {
-			wc.PerformActionOnElement("BlogLink_HomePage","Click","");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    }
+	public void clickOnAddToCartButton() throws Exception {
+		wc.performMouseActions("Item_TshirtPage", "MouseHover");
+		wc.PerformActionOnElement("AddToCartButton_TshirtPage", "Click", "");
+	}
+
+	public void clickOnProceedToCheckoutButton() throws Exception {
+		wc.PerformActionOnElement("ProceedToCheckout_TshirtPage", "Click", "");
+	}
+
+
 }

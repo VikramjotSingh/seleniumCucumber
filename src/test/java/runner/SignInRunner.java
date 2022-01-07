@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions( 
-		tags = {"@signinpage"},
+		//tags = {"@signinpage"},
 		glue = {"stepdefs"}, 
 //		plugin = {"html:target/cucumber-reports/SignIn/cucumber-pretty",
 //				"json:target/json-cucumber-reports/signin/cukejson.json",

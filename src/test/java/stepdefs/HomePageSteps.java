@@ -37,7 +37,7 @@ public class HomePageSteps extends webconnector {
 		Thread.sleep(2000);
 	}
 
-    @Given("^User navigates to QATechTesting HomePage$")
+  /*  @Given("^User navigates to QATechTesting HomePage$")
     public void aUserNavigatesToHomePage() throws InvalidFormatException, IOException {
         this.homePage.goToHomePage();
     }
@@ -45,5 +45,5 @@ public class HomePageSteps extends webconnector {
     @Then("^User verify that Blog Link is displayed$")
     public void googleLogoIsDisplayed() throws Exception {
         this.homePage.checkBlogLinkDisplay();
-    }
+    }*/
 }
